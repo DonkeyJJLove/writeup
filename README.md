@@ -8,7 +8,7 @@
 1. [Ekosystem zarządzania oprogramowaniem w Windows](model.md)  
    Artykuł omawia zarządzanie oprogramowaniem w środowiskach Windows, koncentrując się na najlepszych praktykach z wykorzystaniem Microsoft Endpoint Configuration Manager (MECM) oraz SoftwareLicensingService. Porusza także ich integrację z Windows Management Instrumentation (WMI) dla kompleksowego zarządzania oprogramowaniem i licencjami.
 
-# [SynapticVisualizationApp](https://github.com/DonkeyJJLove/writeup/tree/main) - Plan wizualizacji i optymalizacji dla ekosystemu zarządzania oprogramowaniem Windows
+# [SynapticVisualizationApp]([https://github.com/DonkeyJJLove/writeup/tree/main](https://github.com/DonkeyJJLove/writeup/tree/master)) - Plan wizualizacji i optymalizacji dla ekosystemu zarządzania oprogramowaniem Windows
 
 ---
 
