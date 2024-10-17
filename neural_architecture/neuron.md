@@ -1,4 +1,4 @@
-# The **`neuron.py`** file defines the **`Neuron`** class, which represents an individual neuron within the neural network being constructed by the **SynapticVisualizationApp**. Here's a detailed analysis of its components:
+### The **`neuron.py`** file defines the **`Neuron`** class, which represents an individual neuron within the neural network being constructed by the **SynapticVisualizationApp**. Here's a detailed analysis of its components:
 
 ### **Key Components of `neuron.py`**
 
