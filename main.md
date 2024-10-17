@@ -1,219 +1,105 @@
-# SynapticApp
+Let's start with a detailed analysis of **`main.py`**, which is typically the entry point in most Python applications and often coordinates the key processes of the application.
 
-## 1. Wprowadzenie
+### **Analysis of `main.py`**
 
-SynapticApp to zaawansowane rozwiązanie do wizualizacji procesów decyzyjnych opartych na sieciach neuronowych, przekształcających naturalne przetwarzanie języka (NLP) na struktury synaptyczne. Aplikacja ta pełni kluczową rolę w mapowaniu relacji językowych na modele sieci neuronowych, umożliwiając generację artefaktów wizualnych. Obsługuje język polski, co dodatkowo podkreśla wyzwanie związane z transformacją logiki językowej na abstrakcyjne struktury neuronowe.
+#### Purpose:
+`main.py` in the **SynapticVisualizationApp** project is likely responsible for:
+1. Initializing the application, including setting up the graphical user interface (GUI).
+2. Configuring logging mechanisms to track events during the application’s execution.
+3. Acting as the central hub that calls and organizes the flow of the application’s components, such as visualization modules and neural processing functions.
 
-## 2. Kluczowe idee i cele
+#### Key Responsibilities:
+- **Initialization of the GUI**: `main.py` probably imports the `gui.py` module from `modules/` to initialize the application's interface.
+- **Logging Configuration**: It most likely sets up loggers to capture data about application events and errors, helping in the debugging process.
+- **Starting the Application**: It runs the necessary commands to launch the app's core functionalities and interact with other parts of the application architecture (e.g., `neuron_visualizer.py` for rendering).
 
-Aplikacja realizuje transformację promptów NLP na wizualizacje sieci neuronowych, wspierając analizę logiczną i strukturalną złożonych wyrażeń językowych. Główne cele obejmują:
+### Hypothesis on Workflow:
+1. **GUI Setup**: Once the application is executed, `main.py` initializes the GUI, allowing the user to input prompts that will be processed by other components.
+2. **Prompt Handling**: After receiving the input, the prompt is passed to the `prompt_evaluator.py`, which evaluates and extracts necessary information.
+3. **Neural Processing**: Using the data from `prompt_evaluator.py`, `main.py` coordinates the transformation of this data into a neural representation through `transformation_layer.py`.
+4. **Visualization**: The processed data is then passed to `neuron_visualizer.py`, where the neural relationships are visualized in the GUI.
 
-```plaintext
-1. **Transformacja promptów NLP na logikę neuronową** – przekształcanie wyrażeń językowych na struktury synaptyczne.
-2. **Wizualizacja procesów decyzyjnych** – tworzenie dynamicznych wizualizacji struktury artefaktów neuronowych.
-```
-## 3. Struktura aplikacji
+This structure allows the **SynapticVisualizationApp** to interactively visualize complex data inputs as synaptic networks. 
 
-Aplikacja została podzielona na warstwy, które umożliwiają łatwe zarządzanie oraz skalowalność. Każda warstwa pełni odrębną rolę w przekształcaniu danych na artefakty logiczne.
-
-### 3.1 Warstwa Meta-Architektury
-
-Warstwa ta obejmuje abstrakcyjne komponenty odpowiedzialne za interpretację promptów oraz przekształcanie ich na struktury logiczne.
-
-```plaintext
-meta_architecture/
-├── prompt_parser.py         # Interpretuje wyrażenia językowe (prompty) na logiczne jednostki.
-├── synapse_language.py      # Przekształca zależności zdefiniowane w promptach na synaptyczne relacje.
-└── transformation_layer.py  # Transformuje jednostki zależności językowych na artefakty logiczne.
-```
-
-### 3.2 Warstwa Neuronowej Architektury
-
-Ta warstwa odpowiada za reprezentację logiki w postaci sieci neuronowej.
-
-```plaintext
-neural_architecture/
-├── neuron.py                # Reprezentuje pojedynczy neuron, czyli jednostkę przetwarzania danych.
-├── synapse.py               # Modeluje połączenia synaptyczne między neuronami.
-└── neural_network.py        # Zawiera logikę tworzenia struktur sieci neuronowych.
-```
-
-### 3.3 Warstwa Wizualizacji
-
-Odpowiada za graficzne przedstawienie relacji między neuronami.
-
-```plaintext
-visualization/
-├── neuron_visualizer.py     # Wizualizuje sieć neuronową na wykresach 3D.
-├── dependency_analyzer.py   # Analizuje zależności między komponentami promptów.
-└── visualization.py         # Tworzy artefakty wizualne oparte na strukturze sieci neuronowej.
-```
-
-## 4. Naukowe podstawy i zasadność techniczna
-
-### 4.1 Transformacja NLP na logikę neuronową
-
-Aplikacja wykorzystuje NLP do tworzenia struktur synaptycznych, reprezentujących zależności językowe. NLP pozwala aplikacji na rozumienie języka naturalnego i przekładanie go na strukturę logiczną.
-
-### 4.2 Meta-architektura i synapsy
-
-System synaptyczny aplikacji pozwala na przekształcanie promptów na logiczne relacje neuronowe. Meta-architektura definiuje zależności między komponentami na poziomie abstrakcyjnym, co przekłada się na dynamiczne procesy generatywne.
-
-### 4.3 Wizualizacja procesów decyzyjnych
-
-SynapticApp wizualizuje dynamiczne procesy generatywne, przedstawiając struktury sieci neuronowych w postaci grafów 3D.
-
-## 5. Rola poszczególnych komponentów
-
-Każdy plik źródłowy pełni kluczową rolę w całościowym procesie przekształcania promptów na struktury neuronowe.
-
-```plaintext
-main.py                        # Główne wejście aplikacji. Inicjuje GUI i uruchamia logikę aplikacji.
-modules/
-├── gui.py                     # Obsługuje GUI oraz zarządza interakcją z użytkownikiem.
-├── dependency_parser.py        # Odpowiada za analizę gramatyczną zależności promptów.
-├── neuron.py                  # Modeluje jednostki sieci neuronowej.
-├── synapse.py                 # Odpowiada za relacje synaptyczne między neuronami.
-└── neuron_visualizer.py        # Generuje wizualizacje grafów neuronowych.
-```
-
-## 6. Opis techniczny
-
-### [main.py](main.md)
+### Potential Code Flow:
 
 ```python
-import logging
-import sys
-from PyQt5.QtWidgets import QApplication
-from modules.gui import SynapticApp
+# main.py skeleton structure (hypothetical)
 
-def main():
-    logging.basicConfig(filename='logs/app.log', level=logging.DEBUG)
-    logging.info("Uruchamianie aplikacji...")
-    app = QApplication(sys.argv)
-    window = SynapticApp()
-    window.run()
-    sys.exit(app.exec_())
+import logging
+from modules import gui, prompt_evaluator
+from neural_architecture import neuron_visualizer
+
+def setup_logging():
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger(__name__)
+    return logger
+
+def start_app():
+    logger = setup_logging()
+    logger.info("Starting Synaptic Visualization App")
+
+    # Initialize GUI
+    gui.initialize()
+
+    # Capture user prompt
+    user_prompt = gui.get_user_input()
+
+    # Evaluate the prompt
+    processed_prompt = prompt_evaluator.evaluate(user_prompt)
+
+    # Visualize the neural connections
+    neuron_visualizer.visualize(processed_prompt)
 
 if __name__ == '__main__':
-    main()
-```---------------
-
-- **Opis**: Ten plik uruchamia aplikację, inicjuje GUI oraz przekazuje kontrolę do SynapticApp.
-- **Cel**: Inicjalizacja aplikacji oraz zarządzanie logiką aplikacji.
-
-### gui.py
-
-```python
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QPushButton, QLabel, QComboBox
-from modules.dependency_parser import DependencyParser
-from modules.neuron_visualizer import NeuronVisualizer
-
-class SynapticApp(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.initUI()
-
-    def initUI(self):
-        self.setWindowTitle('Synaptic Visualization App')
-        layout = QVBoxLayout()
-        self.prompt_input = QTextEdit()
-        self.visualize_button = QPushButton('Generuj 3D Artefakt Analizy')
-        self.visualize_button.clicked.connect(self.generate_artifact)
-
-        layout.addWidget(QLabel('Wprowadź prompt:'))
-        layout.addWidget(self.prompt_input)
-        layout.addWidget(self.visualize_button)
-        self.setLayout(layout)
-
-    def generate_artifact(self):
-        prompt = self.prompt_input.toPlainText()
-        parser = DependencyParser(system='UD')
-        relations = parser.parse(prompt)
-        neurons = self.create_neurons(relations)
-        visualizer = NeuronVisualizer(neurons)
-        visualizer.visualize()
-
-    def create_neurons(self, relations):
-        # Konwersja zależności na neurony
-        neurons = []
-        for relation in relations:
-            neuron = Neuron(relation['word'], relation['pos'])
-            neurons.append(neuron)
-        return neurons
+    start_app()
 ```
 
-- **Opis**: Ten plik zarządza logiką GUI oraz interakcją użytkownika z aplikacją. Odpowiada za przekształcanie promptów w strukturę neuronową i jej wizualizację.
-- **Cel**: Obsługa interfejsu użytkownika oraz zarządzanie analizą i wizualizacją neuronów.
+### **Key Elements of `main.py`:**
 
-### neuron.py
+#### 1. **Logging Configuration:**
+   The script sets up logging, storing logs in the `logs/app.log` file. It uses a detailed logging format that includes the timestamp, log level, and message.
 
-```python
-class Neuron:
-    def __init__(self, name, pos):
-        self.name = name
-        self.pos = pos
-        self.connections = []
+   ```python
+   logging.basicConfig(
+       filename='logs/app.log',
+       filemode='a',
+       format='%(asctime)s %(levelname)s:%(message)s',
+       level=logging.DEBUG  # Detailed logging for debugging purposes
+   )
+   logging.info("Uruchamianie aplikacji...")
+   ```
 
-    def connect(self, other_neuron, synapse):
-        self.connections.append((other_neuron, synapse))
-```
+#### 2. **PyQt5 GUI Initialization:**
+   The application uses the PyQt5 framework for its graphical interface. The `QApplication` object is created, which handles the GUI's execution. The `SynapticApp` class is imported from the `modules/gui.py` module and displayed using the `.show()` method.
 
-- **Opis**: Modeluje pojedynczy neuron w sieci neuronowej, przechowując informacje o nazwie, pozycji i połączeniach.
-- **Cel**: Reprezentowanie jednostek w systemie neuronowym.
+   ```python
+   app = QApplication(sys.argv)
+   logging.info("QApplication zainicjalizowane.")
+   
+   synaptic_app = SynapticApp()
+   synaptic_app.show()  # Display the GUI
+   logging.info("SynapticApp wyświetlone.")
+   ```
 
-### synapse.py
+#### 3. **Exception Handling:**
+   The `try-except` block captures any exceptions that might occur during the initialization and execution of the application, logging any errors and gracefully exiting with a non-zero status code if something goes wrong.
 
-```python
-class Synapse:
-    def __init__(self, weight):
-        self.weight = weight
-```
+   ```python
+   try:
+       sys.exit(app.exec_())  # Start the event loop
+   except Exception as e:
+       logging.exception("Wystąpił nieoczekiwany błąd podczas uruchamiania aplikacji.")
+       sys.exit(1)
+   ```
 
-- **Opis**: Reprezentuje synapsę, czyli połączenie między neuronami z określoną wagą.
-- **Cel**: Modelowanie połączeń między neuronami w sieci.
+### **Main Workflow:**
+- **Logging Initialization**: The script first configures logging to capture detailed application events.
+- **GUI Initialization**: The PyQt5 `QApplication` object is initialized, and the main application window (`SynapticApp`) is displayed.
+- **Error Handling**: Any errors during startup are logged, and the application exits with a failure code if an error occurs.
 
-### neuron_visualizer.py
+### **Future Enhancements:**
+The docstring mentions potential future improvements, such as adding configuration options to the GUI and integrating performance monitoring features.
 
-```python
-import plotly.graph_objects as go
-
-class NeuronVisualizer:
-    def __init__(self, neurons):
-        self.neurons = neurons
-
-    def visualize(self):
-        fig = go.Figure()
-        for neuron in self.neurons:
-            fig.add_trace(go.Scatter3d(x=[neuron.pos[0]], y=[neuron.pos[1]], z=[neuron.pos[2]],
-                                       mode='markers', marker=dict(size=10), name=neuron.name))
-        fig.show()
-```
-
-- **Opis**: Odpowiada za wizualizację neuronów w formie grafu 3D.
-- **Cel**: Wizualizacja relacji między neuronami w sieci neuronowej.
-
-### dependency_parser.py
-
-```python
-class DependencyParser:
-    def __init__(self, system):
-        self.system = system
-
-    def parse(self, text):
-        # Zwraca przetworzone zależności w formie listy
-        return [{'word': 'Piszę', 'pos': 'VERB', 'dependency': 'root'},
-                {'word': 'aplik
-
-ację', 'pos': 'NOUN', 'dependency': 'object'}]
-```
-
-- **Opis**: Parser zależności gramatycznych, który przekształca prompty w zależności synaptyczne.
-- **Cel**: Analizowanie promptów i generowanie zależności synaptycznych.
-
-## 7. Podsumowanie
-
-SynapticApp jest zaawansowaną aplikacją, która łączy NLP z sieciami neuronowymi w celu tworzenia wizualnych artefaktów. Dzięki modularnej architekturze oraz warstwie wizualizacji, aplikacja może być łatwo rozbudowywana o nowe funkcje. Główne pliki systemu są odpowiedzialne za transformację promptów na struktury neuronowe, które następnie są wizualizowane w formie grafów 3D, co czyni SynapticApp narzędziem zarówno dla naukowców, jak i badaczy w dziedzinie NLP i sieci neuronowych.
-
-
-
+### Summary:
+`main.py` acts as a straightforward entry point, initializing the GUI and logging system for the **SynapticVisualizationApp**. It coordinates the start of the app and ensures that any runtime errors are properly handled and logged.

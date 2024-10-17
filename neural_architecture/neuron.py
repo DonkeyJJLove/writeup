@@ -6,7 +6,6 @@ class Neuron:
     def __init__(self, name, pos=(0, 0, 0)):
         self.name = name
         self.pos = pos
-        self.functionality = functionality  # Adding functionality attribute
         self.synapses = []  # Lista obiektów Synapse
 
     def connect(self, target_neuron, synapse):
