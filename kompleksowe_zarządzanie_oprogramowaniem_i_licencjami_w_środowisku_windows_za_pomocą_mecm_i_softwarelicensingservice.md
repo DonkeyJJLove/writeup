@@ -3,21 +3,19 @@
 Zarządzanie oprogramowaniem w środowisku Windows wymaga efektywnych narzędzi do aktualizacji, aktualizacji systemów, współpracy z różnymi usługami oraz automatyzacji procesów licencyjnych. Kluczowymi elementami tego ekosystemu są Microsoft Endpoint Configuration Manager (MECM) oraz SoftwareLicensingService, które w połączeniu z Windows Management Instrumentation (WMI) umożliwiają kompleksowe zarządzanie licencjami oraz kontrolę nad oprogramowaniem w organizacji.
 
 
-# ![3D Model of Windows Software Management Ecosystem](./3Dmodel_of_windows_software_management_ecosystem.png)
+# ![Model 3D ekosystemu zarządzania oprogramowaniem Windows](./3Dmodel_of_windows_software_management_ecosystem.png)
 
-## Legend:
+## Legenda:
 
-1. **MECM**: Manages the deployment and updates of software.
-2. **SoftwareLicensingService**: Handles license activation and compliance.
-3. **AppLocker**: Ensures application security by controlling executable access.
-4. **Windows Update**: Automates OS updates and patch management.
-5. **Group Policy**: Manages system-wide settings and security policies.
-6. **PowerShell Automation**: Executes scripts for software management.
-7. **Windows Installer**: Handles software installation and version management.
-8. **Certificate Store**: Verifies the authenticity of executables.
-9. **Microsoft Intune**: Handles remote device and software management, particularly in cloud environments.
-
-
+1. **MECM**: Zarządza wdrażaniem i aktualizacjami oprogramowania.
+2. **SoftwareLicensingService**: Obsługuje aktywację licencji i zgodność.
+3. **AppLocker**: Zapewnia bezpieczeństwo aplikacji poprzez kontrolowanie dostępu do plików wykonywalnych.
+4. **Windows Update**: Automatyzuje aktualizacje systemu operacyjnego i zarządzanie poprawkami.
+5. **Group Policy**: Zarządza ustawieniami systemowymi i zasadami bezpieczeństwa.
+6. **PowerShell Automation**: Wykonuje skrypty do zarządzania oprogramowaniem.
+7. **Instalator Windows**: Obsługuje instalację oprogramowania i zarządzanie wersjami.
+8. **Certificate Store**: Weryfikuje autentyczność plików wykonywalnych.
+9. **Microsoft Intune**: Obsługuje zdalne zarządzanie urządzeniami i oprogramowaniem, szczególnie w środowiskach chmurowych.
 
 #### 1. **Microsoft Endpoint Configuration Manager (MECM)**
 
