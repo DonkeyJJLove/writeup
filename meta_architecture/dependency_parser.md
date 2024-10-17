@@ -1,4 +1,4 @@
-# The file **`dependency_parser.py`** defines the `DependencyParser` class, which handles linguistic parsing using two different systems: Universal Dependencies (UD) and Stanford Dependencies (via the Stanza library). Here's a detailed breakdown of the class and its functionality:
+### The file **`dependency_parser.py`** defines the `DependencyParser` class, which handles linguistic parsing using two different systems: Universal Dependencies (UD) and Stanford Dependencies (via the Stanza library). Here's a detailed breakdown of the class and its functionality:
 
 ### **Key Components of `dependency_parser.py`**
 

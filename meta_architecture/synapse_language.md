@@ -1,4 +1,4 @@
-# The **`synapse_language.py`** file defines the `SynapseLanguage` class, which is responsible for creating and managing rules that represent synaptic relationships between parts of speech. These rules are used to model how words (or tokens) in a sentence relate to each other, based on their syntactic roles.
+### The **`synapse_language.py`** file defines the `SynapseLanguage` class, which is responsible for creating and managing rules that represent synaptic relationships between parts of speech. These rules are used to model how words (or tokens) in a sentence relate to each other, based on their syntactic roles.
 
 ### **Key Components of `synapse_language.py`**
 

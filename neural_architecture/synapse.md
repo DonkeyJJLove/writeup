@@ -1,4 +1,4 @@
-# The **`synapse.py`** file defines the **`Synapse`** class, which models the synaptic connections between neurons. These synapses represent relationships between words or tokens, and they carry additional information about the type and strength of the connection. Here's a breakdown of its key components:
+### The **`synapse.py`** file defines the **`Synapse`** class, which models the synaptic connections between neurons. These synapses represent relationships between words or tokens, and they carry additional information about the type and strength of the connection. Here's a breakdown of its key components:
 
 ### **Key Components of `synapse.py`**
 

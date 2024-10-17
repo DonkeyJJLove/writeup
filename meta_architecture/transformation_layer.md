@@ -1,4 +1,4 @@
-# The **`transformation_layer.py`** file plays a key role in converting the linguistic analysis of a prompt (produced by `PromptParser` and `DependencyParser`) into a neural structure consisting of **neurons** and **synapses**. Here's a breakdown of its functionality and how it ties together with other components:
+### The **`transformation_layer.py`** file plays a key role in converting the linguistic analysis of a prompt (produced by `PromptParser` and `DependencyParser`) into a neural structure consisting of **neurons** and **synapses**. Here's a breakdown of its functionality and how it ties together with other components:
 
 ### **Key Components of `transformation_layer.py`**
 

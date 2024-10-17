@@ -1,4 +1,4 @@
-# The **`prompt_parser.py`** file defines the `PromptParser` class, which is a relatively simple module that leverages the **`DependencyParser`** to analyze text prompts.
+### The **`prompt_parser.py`** file defines the `PromptParser` class, which is a relatively simple module that leverages the **`DependencyParser`** to analyze text prompts.
 
 ### **Key Components of `prompt_parser.py`**
 
