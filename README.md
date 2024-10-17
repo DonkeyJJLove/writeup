@@ -14,11 +14,14 @@ Aby zwizualizować model ekosystemu zarządzania oprogramowaniem Windows w **Syn
 Każdy komponent z legendy (np. MECM, Windows Update, AppLocker) należy potraktować jako węzeł w modelu synaptycznym, gdzie relacje między komponentami są połączeniami synaptycznymi. 
 
 - **Węzły**: Reprezentują komponenty zarządzania oprogramowaniem (np. MECM, SoftwareLicensingService, AppLocker).
+
 - **Połączenia synaptyczne**: Relacje, np. „MECM zarządza wdrożeniami oprogramowania z pomocą PowerShell Automation i współpracuje z Windows Update.”
 
 ### Krok 2: Wizualizacja za Pomocą SynapticVisualizationApp
 1. **Importowanie komponentów**: Każdy komponent (MECM, AppLocker, PowerShell) należy przedstawić jako **neurony** w modelu.
+
 2. **Generowanie połączeń**: Korzystając z modułów **visualization.py** i **neuron_visualizer.py**, generujemy interaktywne połączenia między komponentami.
+
 3. **Realizacja synaptyczna**: Zdefiniować w modelu, które komponenty są bezpośrednio połączone synaptycznie (np. MECM <-> PowerShell) oraz które mają pośrednie połączenia (np. MECM <-> SoftwareLicensingService <-> AppLocker).
 
 ### Krok 3: Dynamiczna Interaktywność
@@ -33,16 +36,19 @@ Aby zacząć optymalizację procesów zarządzania w domenie Windows, należy pr
 ### Krok 1: Analiza Słabych Punktów i Wąskich Gardeł
 
 1. **Wizualizacja relacji**: Używając SynapticVisualizationApp, wizualizujemy procesy zarządzania oprogramowaniem, identyfikując węzły o najwyższej ilości połączeń (np. MECM lub AppLocker) i sprawdzając, które komponenty mogą powodować opóźnienia lub błędy w procesach.
+
 2. **Analiza połączeń**: Korzystając z modelu synaptycznego, identyfikujemy miejsca, gdzie połączenia są zbyt skomplikowane lub nieoptymalne (np. niepotrzebne procesy między AppLockerem a Group Policy).
 
 ### Krok 2: Implementacja Zmian Optymalizacyjnych
 
 1. **Redukcja nadmiarowych procesów**: Na podstawie wizualizacji synaptycznej można uprościć relacje, np. eliminując niepotrzebne aktualizacje oprogramowania w MECM lub optymalizując zasady polityk w AppLocker.
+
 2. **Automatyzacja**: Zidentyfikowane wąskie gardła mogą zostać zautomatyzowane (np. wdrażanie skryptów PowerShell w MECM) w celu redukcji nakładu pracy manualnej i przyspieszenia procesów.
    
 ### Krok 3: Monitorowanie i Ulepszanie Procesów
 
 1. **Ciągłe monitorowanie**: Korzystając z SynapticVisualizationApp, możemy monitorować, jak zmiany wprowadzone w ekosystemie (np. optymalizacja AppLocker lub PowerShell) wpływają na ogólną wydajność.
+
 2. **Wizualne raporty**: Generowanie raportów optymalizacyjnych z wizualizacją połączeń synaptycznych w czasie rzeczywistym.
 
 ---
