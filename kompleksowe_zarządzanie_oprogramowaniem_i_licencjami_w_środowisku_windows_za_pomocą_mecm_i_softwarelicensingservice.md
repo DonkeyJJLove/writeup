@@ -2,8 +2,8 @@
 
 Zarządzanie oprogramowaniem w środowisku Windows wymaga efektywnych narzędzi do aktualizacji, aktualizacji systemów, współpracy z różnymi usługami oraz automatyzacji procesów licencyjnych. Kluczowymi elementami tego ekosystemu są Microsoft Endpoint Configuration Manager (MECM) oraz SoftwareLicensingService, które w połączeniu z Windows Management Instrumentation (WMI) umożliwiają kompleksowe zarządzanie licencjami oraz kontrolę nad oprogramowaniem w organizacji.
 
-# 3D Model of Windows Software Management Ecosystem
-![3D Model of Windows Software Management Ecosystem](./3Dmodel_of_windows_software_management_ecosystem.png)
+
+# ![3D Model of Windows Software Management Ecosystem](./3Dmodel_of_windows_software_management_ecosystem.png)
 
 ## Legend:
 
