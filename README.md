@@ -1,8 +1,8 @@
-# Cykl Writup
+# Writup
 
 ## Opis
 
-Cykl **Writup** to seria artykułów stworzonych z nudy, stanowiąca przestrzeń na wolne myśli i tezy autora. Każdy wpis w cyklu jest formą **biblioteki wolumetrycznej**, gdzie gromadzone są różnorodne koncepcje, analizy oraz refleksje na różne tematy. Cykl Writup umożliwia swobodne eksplorowanie idei bez sztywnych ram, co sprzyja kreatywności i innowacyjności.
+**Writup** to seria artykułów stworzonych z nudy, stanowiąca przestrzeń na wolne myśli i tezy autora. Każdy wpis w cyklu jest formą **biblioteki wolumetrycznej**, gdzie gromadzone są różnorodne koncepcje, analizy oraz refleksje na różne tematy. Cykl Writup umożliwia swobodne eksplorowanie idei bez sztywnych ram, co sprzyja kreatywności i innowacyjności.
 
 
 ### [Zarządzanie Oprogramowaniem w Ekosystemie Windows: MECM i SoftwareLicensingService](https://github.com/DonkeyJJLove/writeup/blob/writeup/kompleksowe_zarz%C4%85dzanie_oprogramowaniem_i_licencjami_w_%C5%9Brodowisku_windows_za_pomoc%C4%85_mecm_i_softwarelicensingservice.md)
