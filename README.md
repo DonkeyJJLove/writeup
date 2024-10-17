@@ -4,7 +4,7 @@
 
 ## 1. [Zarządzanie Oprogramowaniem w Ekosystemie Windows: MECM i SoftwareLicensingService](https://github.com/DonkeyJJLove/writeup/blob/writeup/kompleksowe_zarz%C4%85dzanie_oprogramowaniem_i_licencjami_w_%C5%9Brodowisku_windows_za_pomoc%C4%85_mecm_i_softwarelicensingservice.md)
 
-Ten artykuł szczegółowo opisuje zarządzanie oprogramowaniem w środowisku Windows zgodnie z najlepszymi praktykami i standardami. Omawia kluczowe narzędzia takie jak Microsoft Endpoint Configuration Manager (MECM) oraz SoftwareLicensingService, a także ich integrację z Windows Management Instrumentation (WMI). Artykuł stanowi przykład przestrzeni na wolne myśli, gdzie autor mógł rozwijać swoje tezy i analizy w formie kompleksowej dokumentacji.
+Ten artykuł szczegółowo opisuje zarządzanie oprogramowaniem w środowisku Windows zgodnie z najlepszymi praktykami i standardami. Omawia kluczowe narzędzia takie jak Microsoft Endpoint Configuration Manager (MECM) oraz SoftwareLicensingService, a także ich integrację z Windows Management Instrumentation (WMI).
 
 ## Plan Wizualizacji Modelu za Pomocą SynapticVisualizationApp
 
@@ -31,14 +31,17 @@ Każdy węzeł (komponent) będzie mógł zostać **kliknięty**, by wyświetli�
 Aby zacząć optymalizację procesów zarządzania w domenie Windows, należy przeanalizować relacje pomiędzy komponentami ekosystemu, korzystając z mechanizmu synaptycznego. Plan optymalizacji obejmuje następujące kroki:
 
 ### Krok 1: Analiza Słabych Punktów i Wąskich Gardeł
+
 1. **Wizualizacja relacji**: Używając SynapticVisualizationApp, wizualizujemy procesy zarządzania oprogramowaniem, identyfikując węzły o najwyższej ilości połączeń (np. MECM lub AppLocker) i sprawdzając, które komponenty mogą powodować opóźnienia lub błędy w procesach.
 2. **Analiza połączeń**: Korzystając z modelu synaptycznego, identyfikujemy miejsca, gdzie połączenia są zbyt skomplikowane lub nieoptymalne (np. niepotrzebne procesy między AppLockerem a Group Policy).
 
 ### Krok 2: Implementacja Zmian Optymalizacyjnych
+
 1. **Redukcja nadmiarowych procesów**: Na podstawie wizualizacji synaptycznej można uprościć relacje, np. eliminując niepotrzebne aktualizacje oprogramowania w MECM lub optymalizując zasady polityk w AppLocker.
 2. **Automatyzacja**: Zidentyfikowane wąskie gardła mogą zostać zautomatyzowane (np. wdrażanie skryptów PowerShell w MECM) w celu redukcji nakładu pracy manualnej i przyspieszenia procesów.
    
 ### Krok 3: Monitorowanie i Ulepszanie Procesów
+
 1. **Ciągłe monitorowanie**: Korzystając z SynapticVisualizationApp, możemy monitorować, jak zmiany wprowadzone w ekosystemie (np. optymalizacja AppLocker lub PowerShell) wpływają na ogólną wydajność.
 2. **Wizualne raporty**: Generowanie raportów optymalizacyjnych z wizualizacją połączeń synaptycznych w czasie rzeczywistym.
 
@@ -53,4 +56,3 @@ Forma biblioteki wolumetrycznej pozwala na gromadzenie i organizowanie treści w
 ## Jak Skorzystać
 
 Aby korzystać z cyklu Writup, wystarczy przeglądać dostępne artykuły i zapoznawać się z zawartymi w nich treściami. Każdy wpis jest dostępny w formie otwartego dokumentu, który można czytać, komentować i udostępniać dalej.
-
