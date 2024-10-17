@@ -15,7 +15,7 @@
 1. **GUI Setup**: Once the application is executed, `main.py` initializes the GUI, allowing the user to input prompts that will be processed by other components.
 2. **Prompt Handling**: After receiving the input, the prompt is passed to the `prompt_evaluator.py`, which evaluates and extracts necessary information.
 3. **Neural Processing**: Using the data from `prompt_evaluator.py`, `main.py` coordinates the transformation of this data into a neural representation through `transformation_layer.py`.
-4. **Visualization**: The processed data is then passed to `neuron_visualizer.py`, where the neural relationships are visualized in the GUI.
+4. **StwVisualization**: The processed data is then passed to `neuron_visualizer.py`, where the neural relationships are visualized in the GUI.
 
 This structure allows the **SynapticVisualizationApp** to interactively visualize complex data inputs as synaptic networks. 
 
