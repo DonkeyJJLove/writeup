@@ -102,7 +102,7 @@ if __name__ == '__main__':
 - **Opis**: Ten plik uruchamia aplikację, inicjuje GUI oraz przekazuje kontrolę do SynapticApp.
 - **Cel**: Inicjalizacja aplikacji oraz zarządzanie logiką aplikacji.
 
-### [gui.py](gui.md)
+### [gui.py](modules/gui.md)
 
 ```python
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QPushButton, QLabel, QComboBox
@@ -146,7 +146,7 @@ class SynapticApp(QWidget):
 - **Opis**: Ten plik zarządza logiką GUI oraz interakcją użytkownika z aplikacją. Odpowiada za przekształcanie promptów w strukturę neuronową i jej wizualizację.
 - **Cel**: Obsługa interfejsu użytkownika oraz zarządzanie analizą i wizualizacją neuronów.
 
-### [neuron.py](neuron.md)
+### [neuron.py](neural_architecture/neuron.md)
 
 ```python
 class Neuron:
@@ -162,7 +162,7 @@ class Neuron:
 - **Opis**: Modeluje pojedynczy neuron w sieci neuronowej, przechowując informacje o nazwie, pozycji i połączeniach.
 - **Cel**: Reprezentowanie jednostek w systemie neuronowym.
 
-### [synapse.py](synapse.md)
+### [synapse.py](neural_architecture/synapse.md)
 
 ```python
 class Synapse:
@@ -173,7 +173,7 @@ class Synapse:
 - **Opis**: Reprezentuje synapsę, czyli połączenie między neuronami z określoną wagą.
 - **Cel**: Modelowanie połączeń między neuronami w sieci.
 
-### [neuron_visualizer.py](euron_visualizer.md)
+### [neuron_visualizer.py](modules/neuron_visualizer.md)
 
 ```python
 import plotly.graph_objects as go
@@ -193,7 +193,7 @@ class NeuronVisualizer:
 - **Opis**: Odpowiada za wizualizację neuronów w formie grafu 3D.
 - **Cel**: Wizualizacja relacji między neuronami w sieci neuronowej.
 
-### [dependency_parser.py](dependency_parser.md)
+### [dependency_parser.py](meta_architecture/dependency_parser.md)
 
 ```python
 class DependencyParser:
