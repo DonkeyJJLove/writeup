@@ -68,7 +68,6 @@ SynapticApp wizualizuje dynamiczne procesy generatywne, przedstawiając struktur
 Każdy plik źródłowy pełni kluczową rolę w całościowym procesie przekształcania promptów na struktury neuronowe.
 
 ```plaintext
-
 main.py                        # Główne wejście aplikacji. Inicjuje GUI i uruchamia logikę aplikacji.
 modules/
 ├── gui.py                     # Obsługuje GUI oraz zarządza interakcją z użytkownikiem.
