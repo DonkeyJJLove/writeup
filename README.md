@@ -2,7 +2,11 @@
 
 ## 1. Wprowadzenie
 
+![uml.png](https://github.com/DonkeyJJLove/writeup/blob/writeup/uml.png)
+
 SynapticApp to zaawansowane rozwiązanie do wizualizacji procesów decyzyjnych opartych na sieciach neuronowych, przekształcających naturalne przetwarzanie języka (NLP) na struktury synaptyczne. Aplikacja ta pełni kluczową rolę w mapowaniu relacji językowych na modele sieci neuronowych, umożliwiając generację artefaktów wizualnych. Obsługuje język polski, co dodatkowo podkreśla wyzwanie związane z transformacją logiki językowej na abstrakcyjne struktury neuronowe.
+
+
 
 ## 2. Kluczowe idee i cele
 
